@@ -139,11 +139,11 @@ insert into municipio (id, cidade, bandeira, uf) values (default, 'Belo Horizont
 -- cross join / mistura todas as linhas
 -- select * campos FROM (tabela1) JOIN (tabela2) ON t1.pk = t2.pk
 
-select cidade, nome, sigla 
-FROM municipio as m
-JOIN estados as e
-ON e.id = m.uf
-WHERE cidade = "Belo Horizonte";
+	select cidade, nome, sigla 
+	FROM municipio as m
+	JOIN estados as e
+	ON e.id = m.uf
+	WHERE cidade = "Belo Horizonte";
 
 -- ------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -152,17 +152,17 @@ WHERE cidade = "Belo Horizonte";
 -- % qualquer quantidade de caracteres
 -- _ exatamente um único caractere
 
-select * from estados where nome like 'b%';
+	select * from estados where nome like 'b%';
 
 -- ------------------------------------------------------------------------------------------------------------------------------------------
 
-create view Belo_Horizonte_Consulta as 
-select cidade, nome, sigla 
-FROM municipio as m
-JOIN estados as e
-ON e.id = m.uf
-WHERE cidade = "Belo Horizonte";
+	create view Belo_Horizonte_Consulta as 
+	select cidade, nome, sigla 
+	FROM municipio as m
+	JOIN estados as e
+	ON e.id = m.uf
+	WHERE cidade = "Belo Horizonte";
 
-select * from Belo_Horizonte_Consulta;
+	select * from Belo_Horizonte_Consulta;
 
 -- ------------------------------------------------------------------------------------------------------------------------------------------
